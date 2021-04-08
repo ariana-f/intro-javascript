@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Introdução ao Javascript</title>
+
+</head>
+<body>
+    <!-- <h1 id="tittle">Eu vou ser substituído</h1> -->
+    <script>
+        //document.getElementById("tittle").innerHTML = 'Olá, Mundo!';
+
+        // var numero1 = 3;
+        // var numero2 = 5;
+        // var numero3 = numero1 + numero2;
+        // console.log(numero3);
+        // ++numero1 ou --numero1 (3+1) (3-1)
+
+        // var primeiroNome = 'Ariana';
+        // var ultimoNome = 'Ferreira';
+        // console.log(primeiroNome + " " + ultimoNome);
+
+        // var player = 'Ariana F';
+        // var score = 10;
+        // var displayScore = "<h2> A pontuação do jogador <i>" + player + "</i> é " + score + " pontos </h2>";
+        // document.write(displayScore); 
+
+        //var palavras = objectivo.slipt(" "); -lista
+        // ou var palavras = ["Bruno", "Vicente", etc]
+        // primeira palavra = 0;
+        // contar palavras.lenght
+        // .push coloca no fim, .unshift coloca mais um no início
+        // .pop tira do fim, .shift tira do início
+        // .reverse inverte a ordem dos participantes
+
+        // function olaMundo()
+        // {
+        //     document. write("<h1>Olá, Mundo!</h1>")
+        // }
+
+        // olaMundo();
+
+        // var telemovel = {
+        //     fabricante: "Apple",
+        //     modelo: "iPhone",
+        //     cor: "Space Grey",
+        //     características: {
+        //         bluetooth: true,
+        //         wifi: true,
+        //         gps: true,
+        //         jack: false
+        //     },
+        //     aplicacoes: ["Contactos", "Calculadora", "Angry Birds"]
+        // }
+
+        //document.write(telemovel.fabricante);
+        //document.write(telemovel.características.bluetooth);
+        //document.write(telemovel.aplicacoes);
+
+        //document.write(Math.PI);
+        //Math.random() (entre 0 e 1) Math.random() * 10 (entre 1 e 10)
+
+        //var aleatorio = Math.random() * 10;
+        // document.write(Math.ceil(aleatorio)); .ceil arredonda sempre para cima .floor sp para baixo .round funciona direito
+        //Math.min(8, 2, 4, etc) .max
+        //Math.cos(Math.PI) .sin(90)
+        //if(&&) {
+
+        // }
+        // else if (&& !){
+
+        // }
+    </script>
+    <!-- <button></button> -->
+    <h1>Olá, viajante!</h1>
+    <h2>Vamos jogar um jogo...</h2>
+    <h3>Pensa num número entre <span id="minNum"></span> e <span id="maxNum"></span></h3>
+    <hr>
+    <h3>O número é:<span id= "tentativa"></span></h3> 
+    <button onclick="maior()">É maior!</button>
+    <button onclick="menor()">É menor!</button>
+    <button onclick="acertou()">É esse!</button>
+    <hr>
+    <h1 id="genio"></h1>
+
+    <script>
+        var minNum = 0;
+        var maxNum = 100;
+        var tentativa = Math.round((minNum + maxNum) / 2);
+
+        document.getElementById("minNum").innerHTML = minNum;
+        document.getElementById("maxNum").innerHTML = maxNum;
+        document.getElementById("tentativa").innerHTML = tentativa;
+        var maior = function()
+        {
+            minNum = tentativa;
+            attempt();
+            document.getElementById("tentativa").innerHTML = tentativa;
+        }
+        var menor = function()
+        {
+            maxNum = tentativa;
+            attempt();
+            document.getElementById("tentativa").innerHTML = tentativa;
+        }
+        var acertou = function()
+        {
+            document.getElementById("genio").innerHTML = "SOU UM GÉNIO!";
+        }
+
+        function attempt()
+        {
+            tentativa = Math.round((minNum + maxNum) / 2);
+        }
+    </script>
+    
+</body>
+</html>
